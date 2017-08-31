@@ -1,0 +1,572 @@
+/* Base Styles - Typography
+-------------------------------------*/
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;  /* base font-size */
+  color: #454545;
+}
+
+h1,
+h2,
+h3,
+nav,
+.course-link {
+  font-family: 'Rubik', Arial, Helvetica, sans-serif;
+}
+
+h1,
+h2 {
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2,
+.section-title {
+  font-size: 2rem;
+}
+
+h3,
+.course-link,
+button {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+a {
+  text-decoration: none;
+  color: dodgerblue;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+p,
+blockquote {
+  line-height: 1.5;
+}
+
+.section-title {
+  text-align: center;
+  padding: 2rem 0;
+  flex-basis: 100%;
+  flex-shrink: 0;
+}
+
+/* Base Styles - Layout
+---------------------------------------*/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.main-container,
+footer {
+  /* move content down for fixed nav */
+  position: relative;
+  top: 4rem;
+}
+
+/* display: flex for all sections */
+.banner,
+.nav ul,
+.mobile ul,
+.logo,
+.news,
+.side-item,
+.course-wrapper,
+.thesis,
+footer {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.nav ul,
+.logo,
+.banner,
+.side-item,
+footer {
+  align-items: center;
+}
+
+.feature {
+  flex-basis: 60%;
+  padding: 2rem 1.5rem;
+}
+
+.side {
+  flex-basis: 40%;
+}
+
+.image {
+  max-width: 100%;
+  height: auto;
+}
+
+.side-item {
+  border-bottom: 1px solid gainsboro;
+}
+
+.side-item-img {
+  flex-basis: 35%;
+  padding: 1rem;
+}
+
+.side-item-text {
+  flex-basis: 65%;
+  padding: 0 1rem 0 0;
+}
+
+.side-item-text p,
+.course-text-container p {
+  margin: 0.5rem 0;
+}
+
+.banner,
+.highlighted,
+.courses,
+.course-link {
+  background-color: gainsboro;
+}
+
+.nav ul,
+.course-link {
+  list-style: none;
+}
+
+/* Navigation Styles
+----------------------------------*/
+.nav {
+  background-color: white;
+  padding: 1rem 1.5rem;
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  width: 100%;
+}
+
+.nav ul {
+  height: 2rem;
+}
+
+.logo {
+  text-transform: uppercase;
+  color: #3f3f3f;
+  font-weight: 600;
+  font-size: 1.5rem;
+  flex-grow: 1;
+}
+
+.logo-text {
+  color: darkgray;
+  font-weight: 400;
+}
+
+.nav-link {
+  margin-left: 1rem;
+}
+
+/* hide mobile nav */
+.mobile {
+  display: none;
+}
+
+/* Banner Styles
+-------------------------------------------------*/
+.banner-textbox {
+  width: 80%;
+}
+
+.banner-textbox p {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 1.5rem 0;
+}
+
+button {
+  background-color: #454545;
+  color: white;
+  width: 100%;
+  border-radius: 5px;
+  border: 0;
+  box-shadow: 0 5px 0 black;
+  padding: 0.5rem;
+  text-align: center;
+  transition: all 0.3s linear;
+}
+
+button:hover {
+  font-weight: bold;
+}
+
+button:active {
+  box-shadow: 0 2px 0 black;
+  transform: translateY(3px);
+  background-color: black;
+}
+
+/* News and Info Section
+---------------------------------*/
+.news h2 {
+  margin-top: 2rem;
+}
+
+blockquote,
+.quotation-source {
+  margin-top: 1.5rem;
+}
+
+.quotation-source {
+  font-size: 0.8rem;
+}
+
+.news-feature {
+  border-right: 1px solid gainsboro;
+}
+
+.news-item:first-of-type {
+  padding-top: 1rem;
+}
+
+/* Courses Styles
+---------------------------------*/
+.courses-mobile {
+  display: none;
+}
+.course-wrapper {
+  margin: 0 4.5rem;
+  justify-content: space-between;
+}
+
+.course-container {
+  background-color: white;
+  flex: 0 0 31%;
+  margin-bottom: 2rem;
+}
+
+.course-text-container {
+  padding: 1rem 1rem 1.5rem 1rem;
+}
+
+/* Thesis Styles
+------------------------------*/
+.thesis-feature {
+  padding-top: 0;
+}
+
+.thesis-item {
+  border: 0;
+}
+
+video {
+  margin-bottom: 1.5rem;
+}
+
+.video-text {
+  margin-top: 0.5rem;
+}
+
+/* Footer Styles
+------------------------------*/
+footer {
+  border-top: 1px solid gainsboro;
+  padding: 1rem 1.5rem;
+}
+
+footer span {
+  margin-left: 1rem;
+}
+
+.copyright {
+  flex-grow: 1;
+  margin-left: 0;
+}
+
+/* Media Queries
+---------------------------------------*/
+@media only screen and (max-width: 1000px) {
+  /* more space for banner text */
+  .banner-textbox {
+    width: 90%;
+  }
+
+  /* more space for side items, as the main feature's height increases */
+  .side {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .side-item {
+    flex-grow: 1;
+  }
+
+  .side-item-img {
+    flex-basis: 45%;
+  }
+
+  .side-item-text {
+    flex-basis: 55%;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  /* smaller font-size in banner */
+  .banner-textbox p {
+    font-size: 1.2rem;
+    line-height: 1.2;
+  }
+
+  /* more space for flex items in courses section */
+  .course-wrapper {
+    margin: 0 2rem;
+  }
+
+  /* less spacing between text in p in side items & courses */
+  .side-item-text p,
+  .course-text-container p {
+    line-height: 1.2;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  /* smaller font size for banner title */
+  .banner-textbox h1 {
+    font-size: 2rem;
+  }
+
+  /* news: omit photo, quote only */
+  .news .no-display {
+    display: none;
+  }
+
+  /* change flex-direction of news section */
+  .news {
+    flex: column wrap;
+  }
+
+  /* quotation takes up 100% width */
+  .news-feature {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid gainsboro;
+    border-right: 0;
+    padding-top: 0;
+  }
+
+  /* change style of quote */
+  .news-feature h2 {
+    font-size: 1.5rem;
+  }
+  blockquote {
+    font-style: italic;
+  }
+
+  blockquote,
+  .quotation-source {
+    margin-top: 1rem;
+  }
+
+  .quotation-source {
+    align-self: flex-end;
+  }
+
+  /* news side items in row instead of column */
+  .news-side {
+    flex-basis: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .news-item {
+    /*display: flex;
+    flex-direction: column;
+    align-items: stretch;*/
+    display: block;
+    padding-bottom: 1rem;
+  }
+
+  .news-item:first-of-type {
+    padding-top: 0;
+  }
+
+  /* image changed - see <picture> in html */
+  .news-item .side-item-img {
+  }
+  .news-item .side-item-text {
+    padding: 0 1rem 1rem 1rem;
+  }
+
+  .news-item:nth-of-type(1),
+  .news-item:nth-of-type(2),
+  .thesis-item:nth-of-type(1) {
+    border-right: 1px solid gainsboro;
+  }
+
+  /* clear gray background of featured items */
+  .highlighted {
+    background-color: white;
+  }
+
+  /* 2 flex items per row in courses */
+  .course-container {
+    flex-basis: 48%;
+    justify-content: space-around;
+  }
+
+  /* thesis: video full width & exhibit teasers underneath */
+
+  .thesis {
+    display: block;
+  }
+
+  .thesis-side {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .thesis-item {
+    border-top: 1px solid gainsboro;
+    flex: 0 0 50%;
+  }
+}
+
+@media only screen and (max-width: 680px) {
+  /* nav starts to break; remove "for companies" */
+  .nav .no-display {
+    display: none;
+  }
+
+  /* decrease various sizes in banner */
+  .banner-feature {
+    flex-basis: 50%;
+  }
+
+  .banner-textbox h1 {
+    font-size: 1.8rem;
+  }
+
+  .banner-textbox p {
+    font-size: 1rem;
+  }
+
+  .banner-side {
+    flex-grow: 1;
+  }
+
+  /* remove quotation in news entirely */
+  .news-feature {
+    display: none;
+  }
+
+  /* hide thesis exhibit teasers */
+  .thesis-item {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  /* switch to mobile nav */
+  /* hide both desktop nav & thesis exhibit teasers */
+  .desktop {
+    display: none;
+  }
+
+  .mobile {
+    display: flex;
+  }
+
+  .mobile ul {
+    width: 100%;
+    justify-content: space-around;
+  }
+
+  .choice {
+    transition: all 0.3s ease-in-out;
+  }
+
+  .choice:hover {
+    transform: scale(1.3);
+  }
+
+  /* banner: change to column */
+  .banner {
+    display: block;
+  }
+
+  .banner-feature {
+    padding: 0;
+  }
+
+  .banner-side {
+    padding: 2rem 1rem 2rem 1rem;
+  }
+
+  .banner-textbox,
+  button {
+    width: 100%;
+  }
+
+  /* news section: change to column direction */
+  .news-side {
+    flex-direction: column;
+  }
+
+  .news-item {
+    border: 0;
+  }
+
+  .news-item:nth-of-type(1),
+  .news-item:nth-of-type(2) {
+    border-right: 0;
+  }
+
+  .news .side-item-text {
+    padding: 0 0 2rem 2rem;
+    display: block;
+  }
+
+  /* courses section: change to list of subjects*/
+  .courses-mobile {
+    display: block;
+    background-color: white;
+    border-top: 1px solid gainsboro;
+    border-bottom: 1px solid gainsboro;
+  }
+
+  .section-title {
+    padding: 2rem 0 1rem 0;
+  }
+
+  .courses-mobile ul {
+    padding: 0 0 1rem 0;
+  }
+
+  .course-link {
+    padding: 1rem;
+    margin: 1rem;
+    transition: background-color 0.3s ease-in-out;
+  }
+
+  .course-link:hover {
+    background-color: #FCEF71;
+  }
+
+  .course-link:first-of-type {
+    margin-top: 0;
+  }
+
+  /* thesis - full width video */
+  .thesis-feature {
+    flex-basis: 100%;
+    padding: 0 0 1.5rem 0;
+  }
+
+  .thesis-side {
+    display: none;
+  }
+}
